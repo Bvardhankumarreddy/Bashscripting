@@ -1,0 +1,60 @@
+1. Positional Parameters
+
+-> $0 - The name of the script or command being executed
+-> $1, $2, .... $n - The arguments passed to the script (first, second, etc)
+-> $@ - All arguments passed to the script treated as individual words.
+-> $* - All the arguments passed to the script are treated as a single word.
+-> "$@" - Preserves the distinction of arguments as separate words.
+-> "$*" - Treats all arguments as a single word (Usally not prefferred).
+-> $# - The number of arguments passed to the script
+
+2. Process Realted Parameters
+
+-> $$ - The process ID (PID) of the script.
+-> $? - The exit status of the last executed command.
+-> $! - The PID of the last background process.
+
+3. Special Shell Variables
+
+-> $- - The current shell options (e.g., himBH for interactive, history, etc. )
+-> $_ - The last argument of the previous command.
+
+4. Environment Variables
+
+-> $HOME - The current user's home directory
+-> $PATH - The list of directories searched for executable commands.
+-> $USER - The current logged-in user name
+-> $PWD - The current working directory
+-> $OLDPWD - The previous working directory
+-> $SHELL - The path of the shell being used (e.g., /bin/bash)
+-> $LANG - The system language setting
+-> $EDITOR - The default text editor (e.g., vim ,nano)
+
+5. Input/Output Variables
+
+-> $IFS - The internal Field separator used for word spilitting (defauli is white space)
+-> $LINENO - The current line number in the script
+
+6. Array Related Variables
+
+-> BASH_ARGC - Array holding the number of arguments in each function call
+-> BASH_ARGV - Array holding all arguments supplied to the script in reverse order.
+
+7. Debugging and Advanced Variables
+
+-> $BASH_VERSION - The version of the bash shell
+-> $BASH_SOURCE - The source file name of the script
+-> $BASH_SUBSHELL - Indicates the subshell level
+-> $RANDOM -  A random number generator (changes every time you reference it).
+-> $SECONDS - Number of seconds script started running
+-> $UID -  The user id of the script executor
+-> $EUID - The effective user ID of the script executore
+
+
+## Command to run the debugging enabled
+
+-> bash -x myscript.shell
+
+## Command to validate the syntax without executing
+
+-> bash -n myscript.sh
